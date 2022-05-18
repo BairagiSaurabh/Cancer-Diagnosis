@@ -20,7 +20,7 @@ trying out multiple models, I finally use 'Logistic Regression' with Calibration
 ## Screenshots
 
 ![Demo 1](c1.PNG)
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![Demo 2](c3.PNG)
 
 
