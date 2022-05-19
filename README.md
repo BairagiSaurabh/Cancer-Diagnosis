@@ -105,6 +105,11 @@ the two models.
 ## 🛠 Skills
 Python, Feature Engineering, Hyperparameter Tuning, Streamlit, Heroku.
 
+## Results:
+The following table summarizes the log-loss values obtained by trying out different approaches. We see, that Logistic Regression is a clear winner here!!
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![Result Table](result.PNG)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Lessons Learned
 
