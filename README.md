@@ -48,7 +48,7 @@ This is an important feature and our model heavily depends on this for its class
 
 ⚪Gene: This tells us about the gene where the mutation is located. This is a categorical feature.
 
-⚪Variation: This gives us an idea about the aminoacid changes for the mutation.s2
+⚪Variation: This gives us an idea about the aminoacid changes for the mutation.
 ## Technical approach for classification
 
 👉Data Cleaning: The categorical features have no missing values.
