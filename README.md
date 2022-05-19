@@ -68,6 +68,11 @@ dataset is an imbalanced one.
 ⚪ Confusion matrix, matrices for precision & recall. The precision and recall matrices help us to identify the classes where
 our model is poorly predicting.
 
+![1](precision.PNG)
+![2](precision2.PNG)
+![3](recall.PNG)
+![4](recall2.PNG)
+
 👉Data Preprocessing:
 
 I have employed 2 methods for vectorizing categorical data:
