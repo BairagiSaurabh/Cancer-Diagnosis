@@ -25,7 +25,7 @@ I have used various methods to vectorize both categorical and text data to get h
 
 ## Demo
 
-https://final-cancer-model.herokuapp.com/
+https://bairagisaurabh-project-ii-cancer-prediction-app1-wa9krj.streamlit.app/
 
 
 ## Data Overview
