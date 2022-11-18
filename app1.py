@@ -2,37 +2,16 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
-import re
-import nltk
-from nltk.corpus import stopwords
+
 
 # load data
-data = pickle.load(open('data_f.pkl','rb'))
+data = pickle.load(open('x_test.pkl','rb'))
 data_ = pd.DataFrame(data)
 
 # load model;
-sig_clf = pickle.load(open('logistic.pkl','rb'))
+sig_clf = pickle.load(open('model.pkl','rb'))
 
-# One hot encoding for gene:
-ONE = pickle.load(open('one_gene.pkl','rb'))
-
-# One hot encoding for variation:
-ONE_ = pickle.load(open('one_variation.pkl','rb'))
-
-# tfidf for text:
-tfidf = pickle.load(open('tfidf.pkl','rb'))
-
-nltk.download('stopwords')
-stop_words = set(stopwords.words("english"))
-
-def clean(text):
-    sent = text.lower().strip()
-    sent = re.sub('[^a-zA-Z]', ' ',text)
-    sent = sent.split()
-    final = [word for word in sent if
-             not word in set(stop_words)]
-    final_sent = ' '.join(final)
-    return final_sent
+X_test = pickle.load(open('array.pkl','rb'))
 
 st.title('Cancer Diagnosis System')
 st.header('How Genes and tumour are related:')
@@ -64,13 +43,8 @@ def predict(gene,variation):
         st.write('The following variations might be useful to choose from:')
         st.table(c2['Variation'].values)
     else:
-        g_ = ONE.transform([[str(gene)]])
-        v_ = ONE_.transform([[str(variation)]])
-        x1_ = x1
-        t1 = clean(data_['TEXT'].values[x1.index[0]])
-        t2 = tfidf.transform([t1])
-        f1 = np.concatenate((g_,v_,t2.toarray()),axis = 1)
-        predict = list(sig_clf.predict(f1))[0]
+        f1 = X_test.toarray()[x1.index[0]]
+        predict = list(sig_clf.predict([f1]))[0]
         #print('This Gene & Variation belong to: Class {}'.format(predict))
         return ('This Gene & Variation belong to: Class {}'.format(predict))
 
