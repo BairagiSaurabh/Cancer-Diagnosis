@@ -91,7 +91,7 @@ I have employed 2 methods for vectorizing categorical data:
 Python, Feature Engineering, Hyperparameter Tuning (Optuna), Streamlit, Heroku.
 
 
-![Confusion Matrix](con.PNG)
+![Confusion Matrix](con_cancer.PNG)
 
 ![precision_recall](pre_cancer.PNG)
 
