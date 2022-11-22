@@ -6,8 +6,9 @@ All types of Cancer begin when one or more genes in a cell mutate(changes).
 An abnormal protein can cause cells to multiply uncontrollably and become cancerous. A mutation may be beneficial, harmful, or neutral. This depends where in the gene the change occurs.
 
 In this project, I have made a model which takes the features 'Gene', 'Variation' and with the help of clinical evidence (text data) it
-predicts the Cancer class. The dataset contains 9 different types of classes and since in medical domain it is important to reduce false negatives, I have used the "F2 Score" metric to evaluate the model performance.
-I have used various methods to vectorize both categorical and text data to get high F2 score and also used multiple models to see the best one!
+predicts the Cancer class. The dataset contains 9 different types of classes and since in medical domain it is important to reduce false negatives, I have used the "Recall" metric to evaluate the model performance. The dataset is an imbalanced one and hence I have used the "class_weights" as the additional parametre to give weightage to target class and hence have used the models which support the parametre (class_weights)
+
+I have used various methods to vectorize both categorical and text data to get high Recall and also used multiple models to see the best one!
 
 ## Acknowledgements
 
@@ -82,24 +83,16 @@ I have employed 2 methods for vectorizing categorical data:
 
 
 👉Model:
-1) Naive Bayes
-2) KNN
-3) Random Forest
+1) Decision Trees
+2) Random Forest
+3) XGBoost
 
 ## 🛠 Skills
 Python, Feature Engineering, Hyperparameter Tuning (Optuna), Streamlit, Heroku.
 
 
-## Results
-The following table summarizes the F2 Score obtained by trying out different approaches. We see, that Random Forest with Response Coding & TFIDF vectorizer is a clear winner here!!
+![Confusion Matrix](con.PNG)
 
-![Confusion Matrix](s2.PNG)
+![precision_recall](pre_cancer.PNG)
 
-![precision_recall](pre_rec.PNG)
-
-![Result Table](s1.PNG)
-
-
- 
-
-
+![q1](rec_cancer.PNG)
