@@ -26,7 +26,7 @@ I have used various methods to vectorize both categorical and text data to get h
 
 ## Demo
 
-https://bairagisaurabh-project-ii-cancer-prediction-app1-wa9krj.streamlit.app/
+[https://bairagisaurabh-project-ii-cancer-prediction-app1-wa9krj.streamlit.app/](https://cancer-class-prediction.streamlit.app/)
 
 
 ## Data Overview
